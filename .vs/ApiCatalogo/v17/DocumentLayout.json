@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\repository\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\repository\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\logging\\customlogging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\logging\\customloggingproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\logging\\customloggingproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\apicatalogo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -51,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usu\u00E1rio\\source\\repos\\apicatalogocurso\\apicatalogo\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20A7C924-726D-46A6-A136-BFBAE0988FA0}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 251,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -84,14 +84,14 @@
               "RelativeDocumentMoniker": "ApiCatalogo\\Repository\\CategoryRepository.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\CategoryRepository.cs",
               "RelativeToolTip": "ApiCatalogo\\Repository\\CategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA5AAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDIAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T20:42:37.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\ProductRepository.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Repository\\ProductRepository.cs",
@@ -104,33 +104,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
-              "RelativeToolTip": "ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T20:39:13.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Repository\\Interfaces\\ICategoryRepository.cs",
               "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\ICategoryRepository.cs",
               "RelativeToolTip": "ApiCatalogo\\Repository\\Interfaces\\ICategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T20:38:58.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CustomLogging.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Logging\\CustomLogging.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Logging\\CustomLogging.cs",
@@ -138,12 +125,11 @@
               "RelativeToolTip": "ApiCatalogo\\Logging\\CustomLogging.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T20:33:39.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T20:33:39.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CustomLoggingProvider.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Logging\\CustomLoggingProvider.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Logging\\CustomLoggingProvider.cs",
@@ -155,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CustomLoggingProviderConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Logging\\CustomLoggingProviderConfiguration.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Logging\\CustomLoggingProviderConfiguration.cs",
@@ -167,7 +153,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Program.cs",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Program.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Program.cs",
+              "RelativeToolTip": "ApiCatalogo\\Program.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAABIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T20:33:40.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Models\\Category.cs",
+              "RelativeToolTip": "ApiCatalogo\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T20:33:40.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "ApiCatalogo\\Repository\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T20:39:13.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Controllers\\CategoriesController.cs",
@@ -179,19 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Models\\Category.cs",
-              "RelativeToolTip": "ApiCatalogo\\Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T20:33:40.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "ApiCatalogo\\Controllers\\ProductsController.cs",
@@ -203,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\appsettings.json",
               "RelativeDocumentMoniker": "ApiCatalogo\\appsettings.json",
@@ -212,18 +224,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-04-15T20:33:40.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Program.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Program.cs",
-              "ToolTip": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\Program.cs",
-              "RelativeToolTip": "ApiCatalogo\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T20:33:40.186Z"
             },
             {
               "$type": "Document",
@@ -239,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ApiCatalogo.csproj",
               "DocumentMoniker": "C:\\Users\\Usu\u00E1rio\\source\\repos\\ApiCatalogoCurso\\ApiCatalogo\\ApiCatalogo.csproj",
               "RelativeDocumentMoniker": "ApiCatalogo\\ApiCatalogo.csproj",

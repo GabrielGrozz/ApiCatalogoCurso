@@ -1,5 +1,7 @@
 using ApiCatalogo.Context;
 using ApiCatalogo.Logging;
+using ApiCatalogo.Repository;
+using ApiCatalogo.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using System.Text.Json.Serialization;
@@ -17,6 +19,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //registro do nosso provbedor de loging
+builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
+builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 builder.Logging.AddProvider(new CustomLoggingProvider(new CustomLoggingProviderConfiguration { LogLevel = LogLevel.Information}));
 
 //registrandop o serviço para a conexão com o banco de dados
