@@ -19,8 +19,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //registro do nosso provbedor de loging
-builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
-builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 builder.Logging.AddProvider(new CustomLoggingProvider(new CustomLoggingProviderConfiguration { LogLevel = LogLevel.Information}));
 
 //registrandop o serviço para a conexão com o banco de dados
@@ -29,6 +27,12 @@ builder.Services.AddDbContext<AppDbContext>(op =>
 {
     op.UseMySql(MySqlConnection, ServerVersion.AutoDetect(MySqlConnection));
 });
+
+//adicionando no container DI
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

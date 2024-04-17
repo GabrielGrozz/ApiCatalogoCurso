@@ -102,3 +102,4 @@ D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\refint\ApiCatalogo.dll
 D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.pdb
 D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.genruntimeconfig.cache
 D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ref\ApiCatalogo.dll
+D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.sourcelink.json

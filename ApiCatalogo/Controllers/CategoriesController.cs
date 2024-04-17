@@ -1,4 +1,5 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.Repository.Interfaces;
 using Catalog.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,22 +11,23 @@ namespace ApiCatalogo.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ILogger _logger;
-        private readonly AppDbContext _context;
-        public CategoriesController(AppDbContext context, ILogger<CategoriesController> logger)
+        //private readonly IRepository<Category> _context;
+        private readonly ICategoryRepository _context;
+        public CategoriesController(ICategoryRepository repository, ILogger<CategoriesController> logger)
         {
-            _context = context;
+            _context = repository;
             _logger = logger;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Category>> Get()
         {
-            _logger.Log(LogLevel.Warning ,"------------ [ testando o registro de log no método GET do controller Categories ] ------------");
+            _logger.Log(LogLevel.Warning, "------------ [ testando o registro de log no método GET do controller Categories ] ------------");
 
-            var categories = _context.categories.AsNoTracking().ToList();
+            var categories = _context.Get();
             if (categories is null)
             {
-                return NotFound();
+                return NotFound("não foi possível encontrar as categorias");
             }
             return Ok(categories);
         }
@@ -33,23 +35,23 @@ namespace ApiCatalogo.Controllers
         [HttpGet("products")]
         public ActionResult<IEnumerable<Category>> GetWithProducts()
         {
-            var category = _context.categories.AsNoTracking().Include(e => e.Products).ToList();
-            if (category is null)
+            var categories = _context.GetWithProducts();
+            if (categories is null)
             {
-                return NotFound();
+                return NotFound("não foi possível encontrar as categorias");
             }
-            return Ok(category);
+            return Ok(categories);
         }
 
         [HttpGet("{id:int}", Name = "GetCategory")]
         public ActionResult<Category> GetById(int id)
         {
-            var categories = _context.categories.AsNoTracking().FirstOrDefault(e => e.CategoryId == id);
-            if (categories == null)
+            var category = _context.GetById(id);
+            if (category == null)
             {
-                return NotFound();
+                return NotFound("não foi possível encontrar a categoria");
             }
-            return Ok(categories);
+            return Ok(category);
         }
 
         [HttpPost]
@@ -59,10 +61,9 @@ namespace ApiCatalogo.Controllers
             {
                 return BadRequest();
             }
-            _context.Add(category);
-            _context.SaveChanges();
+            var createdCategory = _context.Create(category);
 
-            return new CreatedAtRouteResult("GetCategory", new { id = category.CategoryId }, category);
+            return new CreatedAtRouteResult("GetCategory", new { id = category.CategoryId }, createdCategory);
         }
 
         [HttpPut("{id:int}")]
@@ -70,26 +71,23 @@ namespace ApiCatalogo.Controllers
         {
             if (id != category.CategoryId)
             {
-                return BadRequest();
+                return BadRequest("id invalido");
             }
-            _context.Entry(category).State = EntityState.Modified;
-            _context.SaveChanges();
-
-            return Ok(category);
+            _context.Update(id, category);
+            return Ok($"a categoria {category.Name} foi alterada");
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var category = _context.categories.FirstOrDefault(e => e.CategoryId == id);
+            var category = _context.GetById(id);
             if (category == null)
             {
-                return NotFound();
+                return NotFound("não foi possível encontrar a categoria");
             }
 
-            _context.Remove(category);
-            _context.SaveChanges();
-            return Ok(category);
+            _context.Delete(category);
+            return Ok($"a categoria de id {id} foi excluida.");
         }
     }
 }

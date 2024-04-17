@@ -6,57 +6,61 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Repository
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        private readonly AppDbContext _context;
-        public CategoryRepository(AppDbContext context)
+        protected readonly AppDbContext _context;
+        public CategoryRepository(AppDbContext context) : base(context) { }
+
+        public IEnumerable<Category> GetWithProducts()
         {
-            _context = context;
+            return _context.categories.Include(c => c.Products);
         }
 
-        public IEnumerable<Category> Get()
-        {
-            return _context.categories.ToList();
-        }
+        //----------ESSES MÉTODOS FORAM SUBSTITUIDOS PELOS MÉTODOS GENÉRICOS DE REPOSITORY---------------
 
-        public Category GetById(int id)
-        {
-            Category category = _context.categories.FirstOrDefault(e => e.CategoryId == id);
-            return category;
-        }
+        //public IEnumerable<Category> Get()
+        //{
+        //    return _context.categories.ToList();
+        //}
 
-        public Category Create(Category category)
-        {
-            if (category == null)
-                throw new ArgumentException(nameof(category));
+        //public Category GetById(int id)
+        //{
+        //    Category category = _context.categories.FirstOrDefault(e => e.CategoryId == id);
+        //    return category;
+        //}
 
-            _context.categories.Add(category);
-            _context.SaveChanges();
-            return category;
-        }
+        //public Category Create(Category category)
+        //{
+        //    if (category == null)
+        //        throw new ArgumentException(nameof(category));
 
-        public Category Update(int id, Category category)
-        {
-            if(category == null)
-                throw new ArgumentNullException(nameof(category));
+        //    _context.categories.Add(category);
+        //    _context.SaveChanges();
+        //    return category;
+        //}
 
-            _context.Entry(category).State = EntityState.Modified;
-            _context.SaveChanges();
-            return category;
-        }
+        //public Category Update(int id, Category category)
+        //{
+        //    if(category == null)
+        //        throw new ArgumentNullException(nameof(category));
 
-        public Category Delete(int id)
-        {
-            //diferentemente do FirstOrDefault, o Find procura pela chave primária e não pelas propriedades, e ele também faz uma pesquisa no contexto e não no banco de dados
-            Category category = _context.categories.Find(id);
+        //    _context.Entry(category).State = EntityState.Modified;
+        //    _context.SaveChanges();
+        //    return category;
+        //}
 
-            if (category == null)
-                throw new ArgumentNullException(nameof(category));
+        //public Category Delete(int id)
+        //{
+        //    //diferentemente do FirstOrDefault, o Find procura pela chave primária e não pelas propriedades, e ele também faz uma pesquisa no contexto e não no banco de dados
+        //    Category category = _context.categories.Find(id);
 
-            _context.categories.Remove(category);
-            _context.SaveChanges();
-            return category;
-        }
+        //    if (category == null)
+        //        throw new ArgumentNullException(nameof(category));
+
+        //    _context.categories.Remove(category);
+        //    _context.SaveChanges();
+        //    return category;
+        //}
 
 
 

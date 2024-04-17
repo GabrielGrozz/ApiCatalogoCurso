@@ -1,6 +1,9 @@
-﻿namespace ApiCatalogo.Repository.Interfaces
+﻿using Catalog.Models;
+
+namespace ApiCatalogo.Repository.Interfaces
 {
-    public interface IProductRepository
+    public interface IProductRepository : IRepository<Product>
     {
+
     }
 }
