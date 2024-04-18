@@ -1,9 +1,12 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.DTOs;
 using ApiCatalogo.Repository.Interfaces;
+using AutoMapper;
 using Catalog.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace ApiCatalogo.Controllers
 {
@@ -12,58 +15,77 @@ namespace ApiCatalogo.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IRepository<Product> _context;
-        public ProductsController(IRepository<Product> context)
+        private readonly IMapper _mapper;
+        public ProductsController(IRepository<Product> context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> Get() 
+        public ActionResult<IEnumerable<ProductDTO>> Get()
         {
             var products = _context.Get();
             if (products is null)
             {
                 return NotFound("não foi possível encontrar os produtos");
             }
-            return Ok(products);
+
+            var dto = _mapper.Map<IEnumerable<ProductDTO>>(products);
+            return Ok(dto);
         }
 
         [HttpGet("{id:int}", Name = "GetProduct")]
-        public ActionResult<Product> GetById(int id) 
+        public ActionResult<ProductDTO> GetById(int id)
         {
             var product = _context.GetById(id);
             if (product == null)
             {
                 return NotFound("não foi possível encontrar o produto");
             }
-            return Ok(product);
+            //mapeia os produtos para um dto
+            var dto = _mapper.Map<ProductDTO>(product);
+
+            return Ok(dto);
         }
 
         [HttpPost]
-        public ActionResult Post(Product product) 
+        //recebe um dto e retorna um dto
+        public ActionResult<ProductDTO> Post(ProductDTO productDto)
         {
-            if(product == null)
+            if (productDto == null)
             {
                 return BadRequest("não foi possível encontrar o produto");
             }
-            var createdProduct = _context.Create(product);
 
-            return new CreatedAtRouteResult("GetProduct", new { id = product.ProductId}, createdProduct);
+            var prod = _mapper.Map<Product>(productDto);
+
+            var createdProduct = _context.Create(prod);
+
+            var dto = _mapper.Map<ProductDTO>(prod);
+
+            return new CreatedAtRouteResult("GetProduct", new { id = dto.ProductId }, createdProduct);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult Put(int id,Product product)
+        public ActionResult<ProductDTO> Put(int id, ProductDTO productDto)
         {
-            if(id != product.ProductId)
+            if (id != productDto.ProductId)
             {
                 return BadRequest("id invalido");
             }
-            _context.Update(id, product);
-            return Ok($"o produto {product.Name} foi alterado");
+
+            var prod = _mapper.Map<Product>(productDto);
+
+            _context.Update(id, prod);
+
+            var dto = _mapper.Map<ProductDTO>(prod);
+
+            return Ok($"o produto {dto.Name} foi alterado");
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id)
+        public ActionResult<ProductDTO> Delete(int id)
         {
             var product = _context.GetById(id);
             if (product == null)
@@ -71,8 +93,11 @@ namespace ApiCatalogo.Controllers
                 return NotFound("não foi possível encontrar o produto");
             }
 
-             _context.Delete(product);
-            return Ok($"o item de id {id} foi excluido");
+            _context.Delete(product);
+
+            var dto = _mapper.Map<ProductDTO>(product);
+
+            return Ok($"o item {dto.Name} foi excluido");
         }
     }
 }

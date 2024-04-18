@@ -9,12 +9,13 @@ namespace ApiCatalogo.Repository
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         protected readonly AppDbContext _context;
-        public CategoryRepository(AppDbContext context) : base(context) { }
+        public CategoryRepository(AppDbContext context) : base(context) { _context = context; }
 
         public IEnumerable<Category> GetWithProducts()
         {
-            return _context.categories.Include(c => c.Products);
+            return _context.categories.Include(e => e.Products);
         }
+
 
         //----------ESSES MÉTODOS FORAM SUBSTITUIDOS PELOS MÉTODOS GENÉRICOS DE REPOSITORY---------------
 

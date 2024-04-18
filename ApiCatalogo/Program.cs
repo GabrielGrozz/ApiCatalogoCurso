@@ -1,4 +1,5 @@
 using ApiCatalogo.Context;
+using ApiCatalogo.DTOs.Mapping;
 using ApiCatalogo.Logging;
 using ApiCatalogo.Repository;
 using ApiCatalogo.Repository.Interfaces;
@@ -32,6 +33,9 @@ builder.Services.AddDbContext<AppDbContext>(op =>
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+//informa para o automapper quais tipos da aplicacao possui perfis de mapeamento
+builder.Services.AddAutoMapper(typeof(ProductDTOMappingProfile));
 
 var app = builder.Build();
 

@@ -11,7 +11,7 @@ namespace ApiCatalogo.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ILogger _logger;
-        //private readonly IRepository<Category> _context;
+        private readonly IRepository<Category> _ccontext;
         private readonly ICategoryRepository _context;
         public CategoriesController(ICategoryRepository repository, ILogger<CategoriesController> logger)
         {
@@ -31,6 +31,8 @@ namespace ApiCatalogo.Controllers
             }
             return Ok(categories);
         }
+
+
 
         [HttpGet("products")]
         public ActionResult<IEnumerable<Category>> GetWithProducts()
