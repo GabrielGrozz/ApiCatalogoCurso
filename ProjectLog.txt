@@ -329,3 +329,33 @@ Information : 0 - Application started. Press Ctrl+C to shut down.
 Information : 0 - Hosting environment: Development
 Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
 Information : 0 - Application is shutting down...
+Information : ListeningOnAddress - Now listening on: https://localhost:7253
+Information : ListeningOnAddress - Now listening on: http://localhost:5272
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Development
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
+Warning : 0 - ------------ [ testando o registro de log no método GET do controller Categories ] ------------
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`CategoryId`, `c`.`ImageUrl`, `c`.`Name`
+FROM `categories` AS `c`
+Error : UnhandledException - An unhandled exception has occurred while executing the request.
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Warning : 0 - ------------ [ testando o registro de log no método GET do controller Categories ] ------------
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`CategoryId`, `c`.`ImageUrl`, `c`.`Name`
+FROM `categories` AS `c`
+Error : UnhandledException - An unhandled exception has occurred while executing the request.
+Information : ListeningOnAddress - Now listening on: https://localhost:7253
+Information : ListeningOnAddress - Now listening on: http://localhost:5272
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Development
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
+Warning : 0 - ------------ [ testando o registro de log no método GET do controller Categories ] ------------
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`CategoryId`, `c`.`ImageUrl`, `c`.`Name`
+FROM `categories` AS `c`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`

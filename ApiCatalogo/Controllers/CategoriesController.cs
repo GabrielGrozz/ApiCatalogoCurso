@@ -1,5 +1,7 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.DTOs;
 using ApiCatalogo.Repository.Interfaces;
+using AutoMapper;
 using Catalog.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,16 +13,17 @@ namespace ApiCatalogo.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ILogger _logger;
-        private readonly IRepository<Category> _ccontext;
+        private readonly IMapper _mapper;
         private readonly ICategoryRepository _context;
-        public CategoriesController(ICategoryRepository repository, ILogger<CategoriesController> logger)
+        public CategoriesController(ICategoryRepository repository, IMapper mapper, ILogger<CategoriesController> logger)
         {
             _context = repository;
+            _mapper = mapper;
             _logger = logger;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Category>> Get()
+        public ActionResult<IEnumerable<CategoryDTO>> Get()
         {
             _logger.Log(LogLevel.Warning, "------------ [ testando o registro de log no método GET do controller Categories ] ------------");
 
@@ -29,13 +32,14 @@ namespace ApiCatalogo.Controllers
             {
                 return NotFound("não foi possível encontrar as categorias");
             }
-            return Ok(categories);
+
+            var dto = _mapper.Map<IEnumerable<CategoryDTO>>(categories);
+
+            return Ok(dto);
         }
 
-
-
         [HttpGet("products")]
-        public ActionResult<IEnumerable<Category>> GetWithProducts()
+        public ActionResult<IEnumerable<CategoryDTO>> GetWithProducts()
         {
             var categories = _context.GetWithProducts();
             if (categories is null)
@@ -46,37 +50,51 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetCategory")]
-        public ActionResult<Category> GetById(int id)
+        public ActionResult<CategoryDTO> GetById(int id)
         {
             var category = _context.GetById(id);
             if (category == null)
             {
                 return NotFound("não foi possível encontrar a categoria");
             }
-            return Ok(category);
+
+            var dto = _mapper.Map<CategoryDTO>(category);
+
+            return Ok(dto);
         }
 
         [HttpPost]
-        public ActionResult Post(Category category)
+        public ActionResult Post(CategoryDTO categoryDto)
         {
+            var category = _mapper.Map<Category>(categoryDto);
+
             if (category == null)
             {
                 return BadRequest();
             }
-            var createdCategory = _context.Create(category);
 
-            return new CreatedAtRouteResult("GetCategory", new { id = category.CategoryId }, createdCategory);
+            _context.Create(category);
+
+            var dto = _mapper.Map<CategoryDTO>(category);
+
+            return new CreatedAtRouteResult("GetCategory", new { id = category.CategoryId }, dto);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult Put(int id, Category category)
+        public ActionResult<CategoryDTO> Put(int id, CategoryDTO categoryDto)
         {
-            if (id != category.CategoryId)
+            if (id != categoryDto.CategoryId)
             {
                 return BadRequest("id invalido");
             }
+
+            var category = _mapper.Map<Category>(categoryDto);
+
             _context.Update(id, category);
-            return Ok($"a categoria {category.Name} foi alterada");
+
+            var dto = _mapper.Map<CategoryDTO>(category);
+
+            return Ok($"a categoria {dto.Name} foi alterada");
         }
 
         [HttpDelete("{id:int}")]
@@ -89,7 +107,10 @@ namespace ApiCatalogo.Controllers
             }
 
             _context.Delete(category);
-            return Ok($"a categoria de id {id} foi excluida.");
+
+            var dto = _mapper.Map<CategoryDTO>(category);
+
+            return Ok($"a categoria {dto.Name} foi excluida.");
         }
     }
 }

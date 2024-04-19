@@ -60,11 +60,11 @@ namespace ApiCatalogo.Controllers
 
             var prod = _mapper.Map<Product>(productDto);
 
-            var createdProduct = _context.Create(prod);
+            _context.Create(prod);
 
             var dto = _mapper.Map<ProductDTO>(prod);
 
-            return new CreatedAtRouteResult("GetProduct", new { id = dto.ProductId }, createdProduct);
+            return new CreatedAtRouteResult("GetProduct", new { id = dto.ProductId }, dto);
         }
 
         [HttpPut("{id:int}")]
