@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\dev\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
         "projectName": "ApiCatalogo",
         "projectPath": "D:\\dev\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
-        "packagesPath": "C:\\Users\\ESTUDOS\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
         "outputPath": "D:\\dev\\ApiCatalogo\\ApiCatalogo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ESTUDOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,6 +58,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

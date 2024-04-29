@@ -359,3 +359,53 @@ FROM `categories` AS `c`
 Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
 FROM `products` AS `p`
+Information : ListeningOnAddress - Now listening on: https://localhost:7253
+Information : ListeningOnAddress - Now listening on: http://localhost:5272
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Development
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
+Warning : 0 - ------------ [ testando o registro de log no método GET do controller Categories ] ------------
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`CategoryId`, `c`.`ImageUrl`, `c`.`Name`
+FROM `categories` AS `c`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : 0 - Application is shutting down...
+Information : ListeningOnAddress - Now listening on: http://localhost:5000
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Production
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0
+Warning : FailedToDeterminePort - Failed to determine the https port for redirect.
+Information : 0 - Application is shutting down...
+Information : ListeningOnAddress - Now listening on: https://localhost:7253
+Information : ListeningOnAddress - Now listening on: http://localhost:5272
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Development
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : ListeningOnAddress - Now listening on: https://localhost:7253
+Information : ListeningOnAddress - Now listening on: http://localhost:5272
+Information : 0 - Application started. Press Ctrl+C to shut down.
+Information : 0 - Hosting environment: Development
+Information : 0 - Content root path: D:\dev\ApiCatalogo\ApiCatalogo
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`
+Information : Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `p`.`ProductId`, `p`.`CategoryId`, `p`.`Description`, `p`.`ImageUrl`, `p`.`Name`, `p`.`Price`, `p`.`RegisterData`, `p`.`Storage`
+FROM `products` AS `p`

@@ -1,7 +1,9 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.Pagination;
 using ApiCatalogo.Repository.Interfaces;
 using Catalog.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace ApiCatalogo.Repository
 {
@@ -9,6 +11,22 @@ namespace ApiCatalogo.Repository
     {
         private readonly AppDbContext _context;
         public ProductRepository(AppDbContext context) : base(context) { }
+
+        public PagedList<Product> GetProducts(ProductParameters parameters)
+        {
+            //return Get()
+            //    //ordena pelo nome
+            //    .OrderBy(p => p.Name)
+            //    //pula a pagina ainterior
+            //    .Skip((parameters.PageNumber - 1) * parameters.PageSize)
+            //    //pega os produtos na proxima pagina
+            //    .Take(parameters.PageSize).ToList();
+
+            var products = Get().OrderBy(p => p.ProductId).AsQueryable();
+            var productsOrdened = PagedList<Product>.ToPagedList(products, parameters.PageNumber, parameters.PageSize);
+
+            return productsOrdened;
+        }
 
 
         //----------ESSES MÉTODOS FORAM SUBSTITUIDOS PELOS MÉTODOS GENÉRICOS DE REPOSITORY---------------
@@ -32,7 +50,7 @@ namespace ApiCatalogo.Repository
         //        _context.products.Add(product);
         //        _context.SaveChanges();
         //        return product;
-            
+
         //}
         //public Product Update(int id, Product product)
         //{

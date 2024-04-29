@@ -105,3 +105,4 @@ D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ref\ApiCatalogo.dll
 D:\dev\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.sourcelink.json
 D:\dev\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\AutoMapper.dll
 D:\dev\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\dev\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\Newtonsoft.Json.dll
