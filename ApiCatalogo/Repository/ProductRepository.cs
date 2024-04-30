@@ -12,7 +12,7 @@ namespace ApiCatalogo.Repository
         private readonly AppDbContext _context;
         public ProductRepository(AppDbContext context) : base(context) { }
 
-        public PagedList<Product> GetProducts(ProductParameters parameters)
+        public async Task<PagedList<Product>> GetProducts(ProductParameters parameters)
         {
             //return Get()
             //    //ordena pelo nome
@@ -22,8 +22,9 @@ namespace ApiCatalogo.Repository
             //    //pega os produtos na proxima pagina
             //    .Take(parameters.PageSize).ToList();
 
-            var products = Get().OrderBy(p => p.ProductId).AsQueryable();
-            var productsOrdened = PagedList<Product>.ToPagedList(products, parameters.PageNumber, parameters.PageSize);
+            var products = await Get();
+            var ordered = products.OrderBy(p => p.ProductId).AsQueryable();
+            var productsOrdened = PagedList<Product>.ToPagedList(ordered, parameters.PageNumber, parameters.PageSize);
 
             return productsOrdened;
         }

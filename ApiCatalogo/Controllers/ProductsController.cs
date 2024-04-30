@@ -1,14 +1,10 @@
-﻿using ApiCatalogo.Context;
-using ApiCatalogo.DTOs;
+﻿using ApiCatalogo.DTOs;
 using ApiCatalogo.Pagination;
 using ApiCatalogo.Repository.Interfaces;
 using AutoMapper;
 using Catalog.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace ApiCatalogo.Controllers
 {
@@ -25,9 +21,9 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ProductDTO>> Get()
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> Get()
         {
-            var products = _context.Get();
+            var products = await _context.Get();
             if (products is null)
             {
                 return NotFound("não foi possível encontrar os produtos");
@@ -38,10 +34,9 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("pagination")]
-        public ActionResult<IEnumerable<ProductDTO>> GetProducts([FromQuery] ProductParameters parameters) 
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts([FromQuery] ProductParameters parameters) 
         {
-            var products = _context.GetProducts(parameters);
-
+            var products = await _context.GetProducts(parameters);
 
             var metadata = new
             {
@@ -62,9 +57,9 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetProduct")]
-        public ActionResult<ProductDTO> GetById(int id)
+        public async Task<ActionResult<ProductDTO>> GetById(int id)
         {
-            var product = _context.GetById(id);
+            var product = await _context.GetById(id);
             if (product == null)
             {
                 return NotFound("não foi possível encontrar o produto");
@@ -77,7 +72,7 @@ namespace ApiCatalogo.Controllers
 
         [HttpPost]
         //recebe um dto e retorna um dto
-        public ActionResult<ProductDTO> Post(ProductDTO productDto)
+        public async Task<ActionResult<ProductDTO>> Post(ProductDTO productDto)
         {
             if (productDto == null)
             {
@@ -86,7 +81,7 @@ namespace ApiCatalogo.Controllers
 
             var prod = _mapper.Map<Product>(productDto);
 
-            _context.Create(prod);
+            await _context.Create(prod);
 
             var dto = _mapper.Map<ProductDTO>(prod);
 
@@ -94,7 +89,7 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<ProductDTO> Put(int id, ProductDTO productDto)
+        public async Task<ActionResult<ProductDTO>> Put(int id, ProductDTO productDto)
         {
             if (id != productDto.ProductId)
             {
@@ -111,15 +106,15 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<ProductDTO> Delete(int id)
+        public async Task<ActionResult<ProductDTO>> Delete(int id)
         {
-            var product = _context.GetById(id);
+            var product = await _context.GetById(id);
             if (product == null)
             {
                 return NotFound("não foi possível encontrar o produto");
             }
 
-            _context.Delete(product);
+            await _context.Delete(product);
 
             var dto = _mapper.Map<ProductDTO>(product);
 

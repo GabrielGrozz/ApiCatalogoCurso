@@ -23,11 +23,11 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<CategoryDTO>> Get()
+        public async Task<ActionResult<IEnumerable<CategoryDTO>>> Get()
         {
             _logger.Log(LogLevel.Warning, "------------ [ testando o registro de log no método GET do controller Categories ] ------------");
 
-            var categories = _context.Get();
+            var categories = await _context.Get();
             if (categories is null)
             {
                 return NotFound("não foi possível encontrar as categorias");
@@ -39,9 +39,9 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("products")]
-        public ActionResult<IEnumerable<CategoryDTO>> GetWithProducts()
+        public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetWithProducts()
         {
-            var categories = _context.GetWithProducts();
+            var categories = await _context.GetWithProducts();
             if (categories is null)
             {
                 return NotFound("não foi possível encontrar as categorias");
@@ -50,9 +50,9 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetCategory")]
-        public ActionResult<CategoryDTO> GetById(int id)
+        public async Task<ActionResult<CategoryDTO>> GetById(int id)
         {
-            var category = _context.GetById(id);
+            var category = await _context.GetById(id);
             if (category == null)
             {
                 return NotFound("não foi possível encontrar a categoria");
@@ -64,7 +64,7 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post(CategoryDTO categoryDto)
+        public async Task<ActionResult> Post(CategoryDTO categoryDto)
         {
             var category = _mapper.Map<Category>(categoryDto);
 
@@ -73,7 +73,7 @@ namespace ApiCatalogo.Controllers
                 return BadRequest();
             }
 
-            _context.Create(category);
+            await _context.Create(category);
 
             var dto = _mapper.Map<CategoryDTO>(category);
 
@@ -81,7 +81,7 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<CategoryDTO> Put(int id, CategoryDTO categoryDto)
+        public async Task<ActionResult<CategoryDTO>> Put(int id, CategoryDTO categoryDto)
         {
             if (id != categoryDto.CategoryId)
             {
@@ -90,7 +90,7 @@ namespace ApiCatalogo.Controllers
 
             var category = _mapper.Map<Category>(categoryDto);
 
-            _context.Update(id, category);
+            await _context.Update(id, category);
 
             var dto = _mapper.Map<CategoryDTO>(category);
 
@@ -98,15 +98,15 @@ namespace ApiCatalogo.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var category = _context.GetById(id);
+            var category = await _context.GetById(id);
             if (category == null)
             {
                 return NotFound("não foi possível encontrar a categoria");
             }
 
-            _context.Delete(category);
+            await _context.Delete(category);
 
             var dto = _mapper.Map<CategoryDTO>(category);
 

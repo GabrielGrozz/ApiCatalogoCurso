@@ -11,9 +11,10 @@ namespace ApiCatalogo.Repository
         protected readonly AppDbContext _context;
         public CategoryRepository(AppDbContext context) : base(context) { _context = context; }
 
-        public IEnumerable<Category> GetWithProducts()
+        public async Task<IEnumerable<Category>> GetWithProducts()
         {
-            return _context.categories.Include(e => e.Products);
+            var data =  await _context.categories.Include(e => e.Products).ToListAsync();
+            return data;
         }
 
 

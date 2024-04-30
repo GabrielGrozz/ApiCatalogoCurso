@@ -13,35 +13,35 @@ namespace ApiCatalogo.Repository
             _context = context;
         }
 
-        public IEnumerable<T> Get()
+        public async Task<IEnumerable<T>> Get()
         {
             //o método Set é utilizado para acessar uma coleção
-            return _context.Set<T>().ToList();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public T GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            return _context.Set<T>().Find(id);
+            return await _context.Set<T>().FindAsync(id);
         }
 
-        public T Create(T entity)
+        public async Task<T> Create(T entity)
         {
             _context.Set<T>().Add(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return entity;
         }
 
-        public T Update(int id, T entity)
+        public async Task<T> Update(int id, T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return entity;
         }
 
-        public T Delete(T entity)
+        public async Task<T> Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return entity;
         }
 
