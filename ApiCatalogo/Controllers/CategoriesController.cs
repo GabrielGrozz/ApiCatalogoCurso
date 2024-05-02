@@ -12,21 +12,17 @@ namespace ApiCatalogo.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ILogger _logger;
         private readonly IMapper _mapper;
         private readonly ICategoryRepository _context;
-        public CategoriesController(ICategoryRepository repository, IMapper mapper, ILogger<CategoriesController> logger)
+        public CategoriesController(ICategoryRepository repository, IMapper mapper)
         {
             _context = repository;
             _mapper = mapper;
-            _logger = logger;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> Get()
         {
-            _logger.Log(LogLevel.Warning, "------------ [ testando o registro de log no método GET do controller Categories ] ------------");
-
             var categories = await _context.Get();
             if (categories is null)
             {

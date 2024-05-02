@@ -19,9 +19,6 @@ builder.Services.AddControllers().AddJsonOptions(op =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//registro do nosso provbedor de loging
-builder.Logging.AddProvider(new CustomLoggingProvider(new CustomLoggingProviderConfiguration { LogLevel = LogLevel.Information}));
-
 //registrandop o serviço para a conexão com o banco de dados
 var MySqlConnection = builder.Configuration.GetConnectionString("default");
 builder.Services.AddDbContext<AppDbContext>(op =>
